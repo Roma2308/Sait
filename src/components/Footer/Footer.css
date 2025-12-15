@@ -1,0 +1,115 @@
+.footer {
+  background: #72A1AB;
+  color: #fff;
+  padding: 40px 20px 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.footer-logo img {
+  width: 120px;
+  border-radius: 10px;
+}
+
+.footer-logo p {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.footer-description {
+  max-width: 300px;
+}
+
+.footer-description h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-description p {
+  font-size: 14px;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.footer-description .video-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.footer-description .video-link:hover {
+  text-decoration: underline;
+  color: #000000;
+}
+
+.footer-contact h4 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-contact p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.footer-contact a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-contact a:hover {
+  text-decoration: underline;
+  color: #000000;
+}
+
+/* Кнопка "Подробнее" */
+.contact-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: #72A1AB;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-btn:hover {
+  background-color: #f0f0f0;
+  color: #4b7a81;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+  padding-top: 15px;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-description, .footer-contact {
+    margin-top: 20px;
+  }
+}
