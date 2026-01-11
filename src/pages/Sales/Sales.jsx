@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./sales.css";
+import "./Sales.css";
 import { useTheme } from "../../contexts/ThemeContext";
 import { useLanguage } from "../../contexts/LanguageContext";
 
