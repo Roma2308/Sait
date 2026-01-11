@@ -1,0 +1,133 @@
+:root {
+  --support-bg: #ffffff;
+  --support-text: #222;
+  --input-bg: #f6f6f6;
+  --input-border: #ccc;
+  --input-text: #222;
+  --btn-bg: #72A1AB;
+  --btn-bg-hover: #5f8f98;
+}
+
+[data-theme="dark"] {
+  --support-bg: #0f0f0f;
+  --support-text: #ffffff;
+  --input-bg: #1a1a1a;
+  --input-border: #2a2a2a;
+  --input-text: #fff;
+  --btn-bg: #72A1AB;
+  --btn-bg-hover: #5f8f98;
+}
+
+.support-container {
+  max-width: 520px;
+  margin: 60px auto;
+  padding: 30px;
+  background: var(--support-bg);
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  font-family: Arial, sans-serif;
+  color: var(--support-text);
+  transition: all 0.4s ease;
+}
+
+.support-title {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--btn-bg);
+}
+
+.support-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.support-form input,
+.support-form textarea {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--input-border);
+  font-size: 14px;
+  outline: none;
+  background: var(--input-bg);
+  color: var(--input-text);
+  transition: all 0.3s ease;
+}
+
+.support-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.support-form input::placeholder,
+.support-form textarea::placeholder {
+  color: #999;
+}
+
+.support-form input:focus,
+.support-form textarea:focus {
+  border-color: var(--btn-bg);
+  box-shadow: 0 0 0 2px rgba(114, 161, 171, 0.25);
+}
+
+.send-support-btn {
+  margin-top: 10px;
+  padding: 12px;
+  background-color: var(--btn-bg);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.send-support-btn:hover {
+  background-color: var(--btn-bg-hover);
+  transform: translateY(-1px);
+}
+
+.message-sent {
+  text-align: center;
+  font-size: 18px;
+  color: #4caf50;
+  font-weight: bold;
+  padding: 30px 0;
+}
+
+/* Адаптивка */
+@media (max-width: 600px) {
+  .support-container {
+    margin: 30px 15px;
+    padding: 20px;
+  }
+
+  .support-title {
+    font-size: 20px;
+  }
+
+  .support-form input,
+  .support-form textarea,
+  .send-support-btn {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  .support-container {
+    padding: 15px;
+  }
+
+  .support-title {
+    font-size: 18px;
+  }
+
+  .support-form input,
+  .support-form textarea,
+  .send-support-btn {
+    font-size: 13px;
+  }
+}

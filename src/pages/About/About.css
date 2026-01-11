@@ -1,7 +1,9 @@
 .about {
-  background: #f4f8f9;
+  background: var(--bg-color);
   padding: 30px;
   font-family: Arial, sans-serif;
+  transition: background-color 0.3s;
+  min-height: 100vh;
 }
 
 .about-hero {
@@ -26,10 +28,11 @@
 
 .about-section {
   margin-top: 40px;
-  background: #fff;
+  background: var(--card-bg);
   padding: 30px;
   border-radius: 15px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 6px var(--shadow);
+  transition: background-color 0.3s;
 }
 
 .about-section h2 {
@@ -50,11 +53,12 @@
 }
 
 .about-card {
-  background: #fff;
+  background: var(--card-bg);
   padding: 25px;
   border-radius: 15px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  transition: 0.3s;
+  box-shadow: 0 2px 6px var(--shadow);
+  transition: 0.3s, background-color 0.3s;
+  color: var(--text-color);
 }
 
 .about-card:hover {

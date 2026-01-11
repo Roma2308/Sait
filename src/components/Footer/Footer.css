@@ -24,6 +24,25 @@
   font-size: 16px;
 }
 
+.footer-logo .poll-btn {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #ff9800;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.footer-logo .poll-btn:hover {
+  background-color: #e68900;
+  transform: translateY(-1px);
+}
+
 .footer-description {
   max-width: 300px;
 }
@@ -76,14 +95,32 @@
   color: #000000;
 }
 
-/* Кнопка "Подробнее" */
+.support-btn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.support-btn:hover {
+  background-color: rgba(255, 255, 255, 0.35);
+  transform: translateY(-1px);
+}
+
 .contact-btn {
+  width: 100%;
   margin-top: 10px;
   padding: 10px 20px;
   background-color: #ffffff;
   color: #72A1AB;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
@@ -94,6 +131,25 @@
   color: #4b7a81;
 }
 
+.telegram-footer-btn {
+  display: block;
+  width: 100%;
+  margin-top: 12px;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.telegram-footer-btn:hover {
+  background-color: rgba(255, 255, 255, 0.35);
+  transform: translateY(-1px);
+}
+
 .footer-bottom {
   text-align: center;
   border-top: 1px solid rgba(0, 0, 0, 0.3);
@@ -102,14 +158,79 @@
   color: #ffffff;
 }
 
+/* Адаптивка */
+@media (max-width: 992px) {
+  .footer-content {
+    gap: 20px;
+  }
+
+  .footer-description {
+    max-width: 100%;
+  }
+}
+
 @media (max-width: 768px) {
+  .footer {
+    padding: 30px 15px 15px;
+  }
+
   .footer-content {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 25px;
   }
 
-  .footer-description, .footer-contact {
-    margin-top: 20px;
+  .footer-description,
+  .footer-contact {
+    margin-top: 15px;
+    max-width: 100%;
+  }
+
+  .footer-logo img {
+    width: 100px;
+  }
+
+  .footer-description h4,
+  .footer-contact h4 {
+    font-size: 16px;
+  }
+
+  .footer-description p,
+  .footer-contact p {
+    font-size: 13px;
+  }
+
+  .footer-logo .poll-btn {
+    font-size: 14px;
+    padding: 9px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 25px 10px 15px;
+  }
+
+  .footer-content {
+    gap: 20px;
+  }
+
+  .footer-logo img {
+    width: 80px;
+  }
+
+  .footer-description h4,
+  .footer-contact h4 {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .contact-btn,
+  .support-btn,
+  .telegram-footer-btn,
+  .footer-logo .poll-btn {
+    padding: 8px 16px;
+    font-size: 13px;
   }
 }

@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import "./Contact.css";
 import logo from "../../assets/emerek.png";
+import { useLanguage } from "../../contexts/LanguageContext";
 
 function Contact() {
+  const { t } = useLanguage();
   const [data, setData] = useState({ name: "", email: "", message: "" });
 
   const updateField = (e) => {
@@ -11,7 +13,22 @@ function Contact() {
 
   const sendForm = (e) => {
     e.preventDefault();
-    alert(`Спасибо, ${data.name}! Ваше сообщение отправлено.`);
+    
+    if (!data.name.trim() || !data.email.trim() || !data.message.trim()) {
+      return;
+    }
+
+    const telegramText = `
+Обращение с сайта:
+
+Имя: ${data.name}
+Email: ${data.email}
+Сообщение: ${data.message}
+    `;
+    
+    const encoded = encodeURIComponent(telegramText);
+    window.open(`https://t.me/Roma_ejj?text=${encoded}`, "_blank");
+    
     setData({ name: "", email: "", message: "" });
   };
 
@@ -19,13 +36,13 @@ function Contact() {
     <div className="contact-page">
       <div className="contact-header">
         <img src={logo} alt="Logo" />
-        <h1>Свяжитесь с нами</h1>
-        <p>Мы всегда рады ответить на ваши вопросы и помочь с выбором мебели!</p>
+        <h1>{t.contactTitle}</h1>
+        <p>{t.contactSubtitle}</p>
       </div>
 
       <div className="contact-content">
         <form className="contact-form" onSubmit={sendForm}>
-          <label>Ваше имя</label>
+          <label>{t.yourName}</label>
           <input
             type="text"
             name="name"
@@ -34,7 +51,7 @@ function Contact() {
             required
           />
 
-          <label>Ваш Email</label>
+          <label>{t.yourEmail}</label>
           <input
             type="email"
             name="email"
@@ -43,7 +60,7 @@ function Contact() {
             required
           />
 
-          <label>Сообщение</label>
+          <label>{t.message}</label>
           <textarea
             name="message"
             value={data.message}
@@ -51,15 +68,15 @@ function Contact() {
             required
           ></textarea>
 
-          <button type="submit">Отправить</button>
+          <button type="submit">{t.send}</button>
         </form>
 
         <div className="contact-info">
-          <h2>Наши контакты</h2>
-          <p>Телефон: <a href="tel:+996704122935">+996 704 122 935</a></p>
-          <p>Почта: <a href="mailto:info@mebel.kg">info@mebel.kg</a></p>
-          <p>WhatsApp: <a href="https://wa.me/+996704122935" target="_blank" rel="noopener noreferrer">Написать</a></p>
-          <p>Telegram: <a href="https://t.me/Roma_ejj" target="_blank" rel="noopener noreferrer">Написать</a></p>
+          <h2>{t.ourContacts}</h2>
+          <p>{t.phone}: <a href="tel:+996704122935">+996 704 122 935</a></p>
+          <p>{t.email}: <a href="mailto:info@mebel.kg">info@mebel.kg</a></p>
+          <p>WhatsApp: <a href="https://wa.me/+996704122935" target="_blank" rel="noopener noreferrer">{t.write}</a></p>
+          <p>Telegram: <a href="https://t.me/Roma_ejj" target="_blank" rel="noopener noreferrer">{t.write}</a></p>
         </div>
       </div>
     </div>

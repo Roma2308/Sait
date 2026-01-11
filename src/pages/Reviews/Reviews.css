@@ -1,44 +1,241 @@
 .reviews {
-  margin-top: 50px;
-  padding: 40px;
+  margin-top: 40px;
+  padding: 20px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  background-color: var(--bg-color);
+  min-height: 100vh;
+  transition: background-color 0.3s;
 }
 
 .reviews h2 {
   color: #72A1AB;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.rating-summary {
+  background: var(--card-bg);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px var(--shadow);
   margin-bottom: 30px;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.average-rating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.rating-number {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #72A1AB;
+}
+
+.rating-count {
+  color: var(--text-color);
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+
+.star-rating {
+  display: flex;
+  gap: 5px;
+  font-size: 1.5rem;
+}
+
+.star {
+  color: #ddd;
+  transition: color 0.2s;
+}
+
+.star.filled {
+  color: #ffd700;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.action-btn {
+  padding: 12px 30px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.order-btn {
+  background: linear-gradient(135deg, #72A1AB 0%, #4b7a81 100%);
+  color: #fff;
+}
+
+.reservation-btn {
+  background: linear-gradient(135deg, #8EC5FC 0%, #72A1AB 100%);
+  color: #fff;
+}
+
+.action-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(114, 161, 171, 0.4);
+}
+
+.order-form,
+.reservation-form {
+  background: var(--card-bg);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px var(--shadow);
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.order-form h3,
+.reservation-form h3 {
+  color: #72A1AB;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.order-form input,
+.reservation-form input {
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  outline: none;
+  font-size: 1rem;
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  transition: border-color 0.3s;
+}
+
+.order-form input:focus,
+.reservation-form input:focus {
+  border-color: #72A1AB;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.order-form button,
+.reservation-form button {
+  flex: 1;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  background-color: #72A1AB;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.order-form button:hover,
+.reservation-form button:hover {
+  background-color: #4b7a81;
+  transform: scale(1.02);
+}
+
+.form-buttons button:last-child {
+  background-color: #999;
+}
+
+.form-buttons button:last-child:hover {
+  background-color: #777;
+}
+
+.add-review-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 500px;
+  background: var(--card-bg);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px var(--shadow);
+  margin-bottom: 30px;
+  transition: background-color 0.3s;
+}
+
+.add-review-form h3 {
+  color: #72A1AB;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.add-review-form input,
+.add-review-form textarea {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  outline: none;
+  font-size: 1rem;
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.add-review-form textarea {
+  height: 80px;
+}
+
+.rating-input {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.rating-input span {
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.add-review-form button {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  background-color: #72A1AB;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.add-review-form button:hover {
+  background-color: #8EC5FC;
+  transform: scale(1.03);
 }
 
 .review-slider {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 15px;
   flex-wrap: wrap;
-}
-
-.review-cards {
-  display: flex;
-  gap: 20px;
-}
-
-.review-card {
-  background: #fff;
-  padding: 30px;
-  width: 300px;
-  border-radius: 15px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  text-align: left;
-}
-
-.review-text {
-  font-size: 16px;
-  margin-bottom: 10px;
-}
-
-.review-name {
-  font-weight: bold;
-  color: #72A1AB;
 }
 
 .review-btn {
@@ -50,15 +247,107 @@
   height: 45px;
   border-radius: 50%;
   cursor: pointer;
+  transition: opacity 0.3s;
 }
 
 .review-btn:hover {
   opacity: 0.8;
 }
 
+.review-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+
+.review-card {
+  background: var(--card-bg);
+  padding: 20px 25px;
+  width: 260px;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px var(--shadow);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: background-color 0.3s;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.review-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.review-date {
+  font-size: 0.85rem;
+  color: var(--text-color);
+  opacity: 0.6;
+}
+
+.review-text {
+  font-size: 0.95rem;
+  color: var(--text-color);
+}
+
+.review-name {
+  font-weight: bold;
+  color: #72A1AB;
+  font-size: 0.9rem;
+}
+
+.delete-btn {
+  margin-top: 8px;
+  padding: 5px 8px;
+  border: none;
+  background-color: #ff4d4f;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.delete-btn:hover {
+  background-color: #ff7875;
+}
+
 @media (max-width: 900px) {
   .review-cards {
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .add-review-form {
+    max-width: 90%;
+  }
+
+  .review-card {
+    width: calc(50% - 10px);
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 600px) {
+  .review-cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .review-card {
+    width: 100%;
+    max-width: 300px;
   }
 }

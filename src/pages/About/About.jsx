@@ -1,88 +1,80 @@
 import React from "react";
 import "./About.css";
+import { useLanguage } from "../../contexts/LanguageContext";
+import { useTheme } from "../../contexts/ThemeContext";
 
 function About() {
+  const { t } = useLanguage();
+  const { theme } = useTheme();
+
   return (
-    <div className="about">
+    <div className={`about ${theme}`}>
 
       <div className="about-hero">
-        <h1>О нашей мебельной компании</h1>
+        <h1>{t.aboutTitle}</h1>
         <p>
-          Мы занимаемся производством и продажей качественной мебели
-          для дома, офиса и бизнеса. Наша цель — комфорт, стиль и
-          долговечность.
+          {t.aboutDescription}
         </p>
       </div>
 
       <div className="about-section">
-        <h2>Кто мы</h2>
+        <h2>{t.whoWeAre}</h2>
         <p>
-          Наша компания работает на рынке более 5 лет.
-          За это время мы помогли сотням клиентов обустроить
-          уютное и функциональное пространство.
+          {t.whoWeAreText1}
         </p>
         <p>
-          Мы создаём шкафы, столы, кровати, кухни и мягкую мебель,
-          используя современные материалы и надёжную фурнитуру.
+          {t.whoWeAreText2}
         </p>
       </div>
 
       <div className="about-cards">
         <div className="about-card">
-          <h3>Качество</h3>
+          <h3>{t.quality}</h3>
           <p>
-            Прочные материалы, точная сборка и контроль качества
-            на каждом этапе производства.
+            {t.qualityText}
           </p>
         </div>
 
         <div className="about-card">
-          <h3>Современный дизайн</h3>
+          <h3>{t.modernDesign}</h3>
           <p>
-            Следим за трендами и создаём мебель,
-            которая подходит под любой интерьер.
+            {t.modernDesignText}
           </p>
         </div>
 
         <div className="about-card">
-          <h3>Доступные цены</h3>
+          <h3>{t.affordablePrices}</h3>
           <p>
-            Оптимальное соотношение цены и качества
-            без переплат.
+            {t.affordablePricesText}
           </p>
         </div>
 
         <div className="about-card">
-          <h3>Доставка</h3>
+          <h3>{t.delivery}</h3>
           <p>
-            Быстрая доставка и аккуратная сборка
-            в удобное для вас время.
+            {t.deliveryText}
           </p>
         </div>
       </div>
 
       <div className="about-section highlight">
-        <h2>Наша миссия</h2>
+        <h2>{t.ourMission}</h2>
         <p>
-          Мы стремимся делать мебель, которая делает жизнь удобнее.
-          Каждое изделие создаётся с заботой о комфорте и надёжности.
+          {t.ourMissionText}
         </p>
       </div>
 
       <div className="about-section highlight">
-        <h2>Наше видение</h2>
+        <h2>{t.ourVision}</h2>
         <p>
-          Мы хотим стать надёжным брендом мебели, которому доверяют.
-          Наша цель — создавать современные решения для каждого дома.
+          {t.ourVisionText}
         </p>
       </div>
 
       <div className="about-section highlight">
-        <h2>Наши ценности</h2>
+        <h2>{t.ourValues}</h2>
         <p>
-          Честность, качество и уважение к клиенту —
-          основные принципы нашей работы.
-          Мы ценим доверие и долгосрочное сотрудничество.
+          {t.ourValuesText}
         </p>
       </div>
 

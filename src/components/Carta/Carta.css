@@ -1,0 +1,44 @@
+.carta-container {
+  width: 100%;
+  margin-top: 20px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.carta-map {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (max-width: 992px) {
+  .carta-container {
+    height: 350px;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carta-container {
+    height: 300px;
+    margin-top: 10px;
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carta-container {
+    height: 250px;
+    margin: 10px;
+    width: calc(100% - 20px);
+    border-radius: 6px;
+  }
+}
+
+@media (max-width: 400px) {
+  .carta-container {
+    height: 200px;
+  }
+}

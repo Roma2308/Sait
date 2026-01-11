@@ -5,6 +5,14 @@ import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import Info from "./pages/Info/Info";
 import Reviews from "./pages/Reviews/Reviews";
+import Izbr from "./pages/Izbr/Izbr";
+import Login from "./pages/Login/Login";
+import Vnutr from "./pages/Vnutr/Vnutr";
+import Register from "./pages/Register/Register";
+import Profile from "./pages/Profile/Profile";
+import Sales from "./pages/Sales/Sales";
+import Support from "./pages/Support/Support";
+import Poll from "./pages/Poll/Poll";
 
 
 
@@ -33,6 +41,38 @@ export const myRouter = createBrowserRouter([
             {
                 path: "/rev",
                 element: <Reviews/>
+            },
+            {
+                path: "/izbr",
+                element: <Izbr/>
+            },
+            {
+                path: "/login",
+                element: <Login/>
+            },
+            {
+                path: "/vnutr/:id",
+                element: <Vnutr/>
+            },
+            {
+                path: "/register",
+                element: <Register/>
+            },
+            {
+                path: "/profile",
+                element: <Profile/>
+            },
+            {
+                path: "/sales",
+                element: <Sales/>
+            },
+            {
+                path: "/support",
+                element: <Support/>
+            },
+            {
+                path: "/poll",
+                element: <Poll/>
             },
         ]
     }

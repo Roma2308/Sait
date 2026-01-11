@@ -1,0 +1,196 @@
+.register-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  transition: background-color 0.3s;
+}
+
+.register-card {
+  background-color: #72A1AB;
+  padding: 35px 30px;
+  border-radius: 16px;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  text-align: center;
+}
+
+.register-card h1 {
+  margin-bottom: 25px;
+  color: #fff;
+}
+
+.photo-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.photo-placeholder,
+.photo-preview {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background-color: var(--card-bg);
+  color: #72A1AB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  border: 3px solid var(--card-bg);
+  margin-bottom: 12px;
+  box-shadow: 0 4px 10px var(--shadow);
+  overflow: hidden;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.photo-preview {
+  object-fit: cover;
+}
+
+.photo-upload input[type="file"] {
+  display: none;
+}
+
+.photo-upload label,
+.photo-label {
+  padding: 7px 16px;
+  background-color: rgba(255,255,255,0.25);
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+.photo-upload label:hover,
+.photo-label:hover {
+  background-color: rgba(255,255,255,0.4);
+}
+
+.register-card input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 14px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.register-card input::placeholder {
+  color: #999;
+}
+
+.register-card input:focus {
+  box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
+}
+
+.register-card button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  background-color: rgba(255,255,255,0.25);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.register-card button:hover {
+  background-color: rgba(255,255,255,0.4);
+}
+
+.login-link {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.login-link a {
+  color: rgba(255,255,255,0.9);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .register-page {
+    padding: 15px;
+  }
+  
+  .register-card {
+    padding: 30px 25px;
+    max-width: 100%;
+  }
+  
+  .register-card h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .photo-placeholder,
+  .photo-preview {
+    width: 110px;
+    height: 110px;
+  }
+  
+  .register-card input {
+    font-size: 14px;
+    padding: 12px 15px;
+  }
+  
+  .register-card button {
+    padding: 12px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .register-page {
+    padding: 10px;
+  }
+  
+  .register-card {
+    padding: 25px 20px;
+  }
+  
+  .register-card h1 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .photo-placeholder,
+  .photo-preview {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+  
+  .photo-upload label {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  
+  .register-card input {
+    font-size: 13px;
+    padding: 10px 12px;
+    margin-bottom: 12px;
+  }
+  
+  .register-card button {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
